@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-import cgi
+import sys
 
 # フォームデータの取得
-form = cgi.FieldStorage()
-num1 = float(form.getvalue("num1"))
-num2 = float(form.getvalue("num2"))
-operation = form.getvalue("operation")
+
+num1 = int(sys.argv[1])
+num2 = int(sys.argv[2])
+operation = sys.argv[3]
 
 # 計算処理
 result = None
